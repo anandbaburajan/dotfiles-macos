@@ -1,3 +1,5 @@
+import dracula.draw
+
 c.url.searchengines = {
     'DEFAULT':  'https://google.com/search?hl=en&q={}',
 }
@@ -7,3 +9,10 @@ c.bindings.commands['normal'] = {
     'J': 'tab-prev',
 }
 config.load_autoconfig()
+
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 6,
+        'horizontal': 8
+    }
+})
