@@ -18,5 +18,17 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
   use('tpope/vim-fugitive')
+  
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 end)
