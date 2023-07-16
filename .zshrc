@@ -1,4 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -108,7 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="exa --icons --no-permissions --no-filesize --no-user --no-time -l"
+alias lsh="exa --icons --no-permissions --no-filesize --no-user --no-time -l -a"
 alias c="clear"
+
+unsetopt autocd
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -119,3 +121,28 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias config='/usr/bin/git --git-dir=/Users/anand/.cfg/ --work-tree=/Users/anand'
+export PATH="/opt/homebrew/opt/mariadb@10.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/anand/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/anand/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/anand/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/anand/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/anand/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/anand/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

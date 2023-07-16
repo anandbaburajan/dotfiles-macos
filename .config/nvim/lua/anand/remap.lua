@@ -9,3 +9,4 @@ vim.keymap.set('n', '<leader>s', function()
 end)
 
 vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>', {})
+vim.keymap.set('n', '<leader>ec', ':NvimTreeClose<CR>', {})
