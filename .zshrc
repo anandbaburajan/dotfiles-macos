@@ -148,3 +148,5 @@ if [ -f "/Users/anand/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+eval "$(zoxide init zsh)"
+
