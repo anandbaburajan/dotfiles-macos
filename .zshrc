@@ -106,8 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="exa --icons --no-permissions --no-filesize --no-user --no-time -l"
-alias lsh="exa --icons --no-permissions --no-filesize --no-user --no-time -l -a"
+alias ls="exa -1 -g --icons"
+alias lsh="exa -1 -g --icons -a"
+alias lst="exa -1 -g --icons --tree"
 alias c="clear"
 alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 
